@@ -1,3 +1,9 @@
+/* Section styling for single-page layout */
+section {
+  position: relative;
+  width: 100%;
+}
+
 /* Navbar Styles */
 .navbar {
   position: fixed;

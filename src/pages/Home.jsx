@@ -1,12 +1,9 @@
-import Navbar from "../components/Navbar";
 import cloudImage from "../assets/cloud.png";
 import "./Home.css";
 
 function Home() {
   return (
-    <>
-      <Navbar />
-      <main className="home-container">
+    <main className="home-container">
         <div className="title-cloud-wrapper">
           <h1 className="main-title">Spoorthy's Cloud</h1>
           <div className="cloud-wrapper">
@@ -24,7 +21,6 @@ function Home() {
           <img src={cloudImage} alt="Cloud" className="bg-cloud cloud-6" />
         </div>
       </main>
-    </>
   );
 }
 

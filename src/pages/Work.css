@@ -1,0 +1,262 @@
+/* Work Container with Light Blue Background */
+.work-container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 4rem;
+  background: #A7C7E7;
+  overflow: hidden;
+}
+
+/* Timeline Wrapper */
+.timeline-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  z-index: 10;
+}
+
+/* Timeline Vertical Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #000;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline Item Container */
+.timeline-item {
+  position: relative;
+  margin-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Timeline Node (Black Circle) */
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Project Card */
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  position: relative;
+}
+
+/* Left Side Projects */
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.left .project-card {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Right Side Projects */
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+.timeline-item.right .project-card {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Project Title */
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+/* Project Tags Container */
+.project-tags {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tag Pills */
+.tag {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.tag-0 {
+  background-color: #ffb3ba; /* Light red */
+}
+
+.tag-1 {
+  background-color: #baffc9; /* Light green */
+}
+
+.tag-2 {
+  background-color: #bae1ff; /* Light blue */
+}
+
+/* Background Clouds Container */
+.background-clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Background Cloud Base Styles */
+.bg-cloud {
+  position: absolute;
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+/* Individual Cloud Positioning and Animation */
+.cloud-1 {
+  width: 380px;
+  top: 15%;
+  left: -400px;
+  animation: drift-right 60s linear infinite;
+}
+
+.cloud-2 {
+  width: 350px;
+  top: 10%;
+  left: -400px;
+  animation: drift-right 65s linear infinite;
+  animation-delay: -10s;
+}
+
+.cloud-3 {
+  width: 400px;
+  top: 60%;
+  left: -400px;
+  animation: drift-right 70s linear infinite;
+  animation-delay: -20s;
+}
+
+.cloud-4 {
+  width: 370px;
+  top: 20%;
+  right: -400px;
+  animation: drift-left 62s linear infinite;
+  animation-delay: -8s;
+}
+
+.cloud-5 {
+  width: 390px;
+  top: 50%;
+  right: -400px;
+  animation: drift-left 68s linear infinite;
+  animation-delay: -15s;
+}
+
+.cloud-6 {
+  width: 360px;
+  top: 70%;
+  right: -400px;
+  animation: drift-left 58s linear infinite;
+  animation-delay: -25s;
+}
+
+/* Cloud Animation Keyframes - Horizontal drift across screen */
+@keyframes drift-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 400px));
+  }
+}
+
+@keyframes drift-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 400px));
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .work-container {
+    background: linear-gradient(to bottom, #4A90E2, #5B9BD5);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .timeline-line {
+    left: 2rem;
+  }
+
+  .timeline-node {
+    left: 2rem;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    justify-content: flex-start;
+  }
+
+  .timeline-item.left .project-card,
+  .timeline-item.right .project-card {
+    margin-left: 3rem;
+    margin-right: 0;
+  }
+
+  .project-card {
+    width: calc(100% - 4rem);
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .project-card {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .cloud-1, .cloud-2, .cloud-3, .cloud-4, .cloud-5, .cloud-6 {
+    width: 200px;
+  }
+}

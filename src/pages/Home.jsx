@@ -1,4 +1,5 @@
 import cloudImage from "../assets/cloud.png";
+import birdsImage from "../assets/birds.png";
 import "./Home.css";
 
 function Home() {
@@ -19,6 +20,13 @@ function Home() {
           <img src={cloudImage} alt="Cloud" className="bg-cloud cloud-4" />
           <img src={cloudImage} alt="Cloud" className="bg-cloud cloud-5" />
           <img src={cloudImage} alt="Cloud" className="bg-cloud cloud-6" />
+        </div>
+        
+        {/* Birds - only visible in light mode */}
+        <div className="background-birds">
+          <img src={birdsImage} alt="Birds" className="bird bird-1" />
+          <img src={birdsImage} alt="Birds" className="bird bird-2" />
+          <img src={birdsImage} alt="Birds" className="bird bird-3" />
         </div>
       </main>
   );

@@ -10,7 +10,8 @@
 }
 
 body.dark-mode .work-container {
-  background: #1a2332;
+  background: #1a2332 url('../assets/star.gif') repeat;
+  background-size: 200px 200px;
 }
 
 /* Timeline Wrapper */
@@ -89,9 +90,27 @@ body.dark-mode .work-container {
 .project-title {
   font-size: 1.25rem;
   font-weight: 700;
+  font-family: 'Jomhuria';
   color: #000;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+
+/* Project Description */
+.project-description {
+  font-size: 0.9rem;
+  color: #666;
   margin: 0 0 1rem 0;
   text-align: center;
+  line-height: 1.5;
+}
+
+body.dark-mode .project-description {
+  color: #666;
+}
+
+body.dark-mode .project-title {
+  color: #000;
 }
 
 /* Project Tags Container */
@@ -109,6 +128,7 @@ body.dark-mode .work-container {
   font-size: 0.875rem;
   font-weight: 500;
   color: #000;
+  background-color: #bae1ff;
   transition: opacity 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
@@ -118,16 +138,9 @@ body.dark-mode .work-container {
   transform: scale(1.05);
 }
 
-.tag-0 {
-  background-color: #ffb3ba; /* Light red */
-}
-
-.tag-1 {
-  background-color: #baffc9; /* Light green */
-}
-
-.tag-2 {
-  background-color: #bae1ff; /* Light blue */
+body.dark-mode .tag {
+  background-color: #1a2332;
+  color: #fff;
 }
 
 /* Background Clouds Container */
@@ -212,6 +225,60 @@ body.dark-mode .work-container {
   }
   100% {
     transform: translateX(calc(-100vw - 400px));
+  }
+}
+
+/* Background Birds Container - Light Mode Only */
+.background-birds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+body.dark-mode .background-birds {
+  display: none;
+}
+
+/* Bird Base Styles */
+.bird {
+  position: absolute;
+  opacity: 0.6;
+  width: 300px;
+  height: auto;
+}
+
+/* Individual Bird Positioning and Animation */
+.bird-1 {
+  top: 20%;
+  right: -350px;
+  animation: fly-left 40s linear infinite;
+}
+
+.bird-2 {
+  top: 45%;
+  right: -350px;
+  animation: fly-left 45s linear infinite;
+  animation-delay: -15s;
+}
+
+.bird-3 {
+  top: 70%;
+  right: -350px;
+  animation: fly-left 50s linear infinite;
+  animation-delay: -30s;
+}
+
+/* Bird Animation Keyframes - Fly from right to left */
+@keyframes fly-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 300px));
   }
 }
 

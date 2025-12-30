@@ -36,20 +36,20 @@ section {
 }
 
 .nav-link:hover {
-  color: #646cff;
+  color: skyblue;
 }
 
 /* Dark mode support */
 body.dark-mode .navbar {
-  background-color: rgba(26, 35, 50, 0.95);
+  background-color: rgba(128, 128, 128, 0.95);
 }
 
 body.dark-mode .nav-link {
-  color: rgba(255, 255, 255, 0.87);
+  color: #fff;
 }
 
 body.dark-mode .nav-link:hover {
-  color: #646cff;
+  color: #1a2332;
 }
 
 /* Responsive design */

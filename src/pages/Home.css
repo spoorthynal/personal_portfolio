@@ -9,6 +9,11 @@
   padding-top: 60px;
   background: #A7C7E7;
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode .home-container {
+  background: #1a2332;
 }
 
 .title-cloud-wrapper {
@@ -139,14 +144,8 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .home-container {
-    background: linear-gradient(to bottom, #4A90E2, #5B9BD5);
-  }
-
-  .main-title {
-    color: rgba(255, 255, 255, 0.95);
-  }
+body.dark-mode .main-title {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 @media (max-width: 768px) {

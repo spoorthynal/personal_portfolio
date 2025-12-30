@@ -8,6 +8,11 @@
   padding-top: 60px;
   background: #A7C7E7;
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode .about-container {
+  background: #1a2332;
 }
 
 /* Content Panels Container */
@@ -125,12 +130,6 @@
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .about-container {
-    background: linear-gradient(to bottom, #4A90E2, #5B9BD5);
-  }
-}
 
 /* Responsive design */
 @media (max-width: 1024px) {

@@ -40,18 +40,16 @@ section {
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .navbar {
-    background-color: rgba(26, 26, 26, 0.95);
-  }
+body.dark-mode .navbar {
+  background-color: rgba(26, 35, 50, 0.95);
+}
 
-  .nav-link {
-    color: rgba(255, 255, 255, 0.87);
-  }
+body.dark-mode .nav-link {
+  color: rgba(255, 255, 255, 0.87);
+}
 
-  .nav-link:hover {
-    color: #646cff;
-  }
+body.dark-mode .nav-link:hover {
+  color: #646cff;
 }
 
 /* Responsive design */

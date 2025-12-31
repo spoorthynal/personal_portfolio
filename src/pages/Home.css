@@ -34,7 +34,7 @@ body.dark-mode .home-container {
   font-weight: 700;
   color: #808080;
   text-align: center;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   letter-spacing: -0.02em;
   display: block;
   z-index: 11;
@@ -204,16 +204,52 @@ body.dark-mode .main-title {
 }
 
 @media (max-width: 768px) {
+  .home-container {
+    padding-top: 50px;
+  }
+
+  .title-cloud-wrapper {
+    margin-top: 18rem;
+  }
+
   .main-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .cloud-wrapper {
+    margin-top: -13rem;
   }
 
   .main-cloud {
-    width: 300px;
+    width: 600px;
   }
 
   .cloud-1, .cloud-2, .cloud-3, .cloud-4, .cloud-5, .cloud-6 {
     width: 100px;
+  }
+
+  .bird {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-cloud-wrapper {
+    margin-top: 18rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .main-cloud {
+    width: 500px;
+  }
+
+  .cloud-wrapper {
+    margin-top: -13rem;
   }
 }
 

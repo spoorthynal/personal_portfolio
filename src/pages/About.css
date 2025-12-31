@@ -55,7 +55,8 @@ body.dark-mode .about-container {
 /* Right Panel - Wider with Description */
 .panel-right {
   width: 600px;
-  height: 300px;
+  min-height: 300px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,21 +234,62 @@ body.dark-mode .background-birds {
     width: 90%;
     max-width: 500px;
   }
+
+  .panel-right {
+    min-height: auto;
+    height: auto;
+  }
+
+  .about-description p {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .about-container {
+    padding-top: 50px;
+  }
+
+  .content-panels {
+    margin-top: 3rem;
+  }
+
   .panel-left {
     width: 280px;
     height: 280px;
   }
 
   .panel-right {
-    width: 280px;
-    height: 280px;
+    width: 90%;
+    max-width: 400px;
+    min-height: auto;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .about-description p {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .cloud-1, .cloud-2, .cloud-3, .cloud-4, .cloud-5, .cloud-6 {
     width: 200px;
+  }
+
+  .bird {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel-right {
+    width: 95%;
+    padding: 1.25rem;
+  }
+
+  .about-description p {
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 }
 

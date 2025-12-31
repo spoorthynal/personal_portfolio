@@ -53,17 +53,34 @@ body.dark-mode .footer {
 /* Responsive design */
 @media (max-width: 768px) {
   .footer {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .footer-buttons {
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .footer-button {
     width: 45px;
     height: 45px;
     padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .footer-buttons {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-button {
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
   }
 }
 

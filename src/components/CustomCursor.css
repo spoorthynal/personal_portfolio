@@ -1,0 +1,20 @@
+.sparkle-particle {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  animation: sparkle-fade 0.7s ease-out forwards;
+  line-height: 1;
+}
+
+@keyframes sparkle-fade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.3);
+  }
+}

@@ -1,18 +1,24 @@
 import cloudImage from "../assets/cloud.png";
 import birdsImage from "../assets/birds.png";
 import headshot from "../assets/headshot.JPG";
+import { useTypewriter } from "../hooks/useTypewriter";
 import "./About.css";
 
 function About() {
+  const { displayed, ref } = useTypewriter("About");
+
   return (
     <main className="about-container">
+        <h2 className="about-title" ref={ref}>
+          {displayed}<span className="cursor-blink">|</span>
+        </h2>
         <div className="content-panels">
           <div className="panel panel-left">
             <img src={headshot} alt="Spoorthy" className="headshot-image" />
           </div>
           <div className="panel panel-right">
             <div className="about-description">
-              <p>
+<p>
                 Hi! I'm Spoorthy Nalumachu, a Computer Science student at UCLA, passionate about building products that make a social impact. 
                 I enjoy working at the intersection of technology and design to develop user-centered solutions that 
                 solve real-world problems. I have experience working on several technical projects and I am currently interested in the application of AI in product management and software development.

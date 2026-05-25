@@ -31,6 +31,17 @@ body {
   min-height: 100vh;
 }
 
+.cursor-blink {
+  display: inline-block;
+  animation: blink 0.8s step-end infinite;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 #root {
   width: 100%;
   min-height: 100vh;
